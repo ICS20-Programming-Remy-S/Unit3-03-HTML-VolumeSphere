@@ -7,12 +7,10 @@
 function enterClicked () {
   
   // User data input
-  let aSide = parseFloat(document.getElementById("a-side").value)
-  let bSide = parseFloat(document.getElementById("b-side").value)
-  let height = parseFloat(document.getElementById("height").value)
+  let radius = parseFloat(document.getElementById("radius").value)
   //prosses
-  let volume = 1/6 * (aSide * bSide * height);
+  let volume = 4.0 / 3.0 * Math.PI * Math.pow(radius,3);
   
   // Data given back to user
-  document.getElementById('volume').innerHTML = 'The volume of your triangular pyramid is ' + volume.toFixed(2) + 'cm<sup>3</sup>'
+  document.getElementById('volume').innerHTML = 'The volume of your sphere is ' + volume.toFixed(2) + 'cm<sup>3</sup>'
 }
